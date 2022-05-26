@@ -3,6 +3,17 @@
     initial-value: 0;
     inherits: false;
 }
+
+:root{
+    --num2: 100;
+}
+
+.flexbox-container{
+    height: 200px;
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+}
   
 p {
     transition: --num 5s, color 5s, font-size 5s;
@@ -14,9 +25,9 @@ p::after {
     content: counter(num);
 }
 p:hover {
-    --num: 1000;
+    --num: var(--num2);
     color: red;
-    font-size: 6vmax;
+    font-size: 20vmax;
 }
 progressbar{
     text-align: center;    

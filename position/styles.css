@@ -1,0 +1,23 @@
+.parent{
+    background-color: aqua;
+    margin: 20px;
+    height: 200vmax;
+    position: relative;
+
+}
+
+.child1{
+    background-color: greenyellow;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.child2{
+    background-color: red;
+
+}
+
+.child3{
+    background-color: palevioletred;
+}
