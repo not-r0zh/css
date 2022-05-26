@@ -4,18 +4,23 @@
     inherits: false;
 }
   
-div {
-    transition: --num 5s;
+p {
+    transition: --num 5s, color 5s, font-size 5s;
+    color: blue;
     counter-set: num var(--num);
     font: 800 40px system-ui;
 }
-div::after {
+p::after {
     content: counter(num);
 }
-div:hover {
+p:hover {
     --num: 1000;
+    color: red;
+    font-size: 6vmax;
 }
-  
+progressbar{
+    text-align: center;    
+}
 body {
     margin: 2rem;
   }

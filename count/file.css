@@ -1,0 +1,45 @@
+body {
+    counter-reset: section color;
+}
+h2::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+}
+
+h2:hover{
+    color:green;
+    text-shadow: cadetblue 10;
+}
+
+div::before{
+    counter-increment: color;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: green;
+    transition: width 2s;
+}
+
+div:hover{
+    width: 600px;
+    transition: 0s 0s
+}
+
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+  
+  numbercount{
+    transition: --num 1s;
+    counter-reset: num var(--num);
+}
+  numbercount:hover {
+    --num: 10000;
+}
+  numbercount::after {
+    content: counter(num);
+ }
