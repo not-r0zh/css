@@ -1,0 +1,81 @@
+@property --num1 {
+    syntax: "<integer>";
+    initial-value: 1;
+    inherits: false;
+}
+@property --num2 {
+    syntax: "<integer>";
+    initial-value: 2;
+    inherits: false;
+}
+@property --num3 {
+    syntax: "<integer>";
+    initial-value: 3;
+    inherits: false;
+}
+
+.container{
+    display: flex;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+}
+
+div{
+    font: 800 40px system-ui;
+}
+
+.child1{
+    background-color: blueviolet;
+    order: 1;
+    transition: flex-grow 1s, --num3 1s;
+    padding: 5px;
+    counter-reset: num3 var(--num3);
+    margin: 10px;
+    flex-grow: 3;
+    text-align: center;
+}
+.child1:hover{
+    flex-grow: 10;
+    --num3: 10;
+    --num1: 0;
+}
+.child1::after {
+    content: counter(num3);
+}
+
+.child2{
+    transition: flex-grow 1s, --num2 1s;
+    counter-reset: num2 var(--num2);
+    background-color: brown;
+    order: 2;
+    padding: 5px;
+    margin: 10px;
+    flex-grow: 2;
+    text-align: center;
+}
+.child2:hover{
+    flex-grow: 10;
+    --num2: 10;
+    --num1: 0;
+}
+.child2::after {
+    content: counter(num2);
+}
+
+.child3{
+    transition: flex-grow 1s, --num1 1s;
+    counter-reset: num1 var(--num1);
+    background-color: chocolate;
+    order: 3;
+    text-align: center;
+    flex-grow: 1;
+    padding: 5px;
+    margin: 10px;
+}
+.child3:hover{
+    flex-grow: 10;
+    --num1: 10;
+}
+.child3::after {
+    content: counter(num1);
+}

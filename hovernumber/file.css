@@ -29,9 +29,6 @@ p:hover {
     color: red;
     font-size: 20vmax;
 }
-progressbar{
-    text-align: center;    
-}
 body {
     margin: 2rem;
   }
