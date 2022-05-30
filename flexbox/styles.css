@@ -20,6 +20,15 @@
     flex-wrap: wrap;
 }
 
+.container2{
+    display: flex;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+    position: sticky;
+    justify-content: center;
+    top: 10px;
+}
+
 div{
     font: 800 40px system-ui;
 }
@@ -78,4 +87,16 @@ div{
 }
 .child3::after {
     content: counter(num1);
+}
+
+.sticky{
+    transition: flex-basis 1s;
+    background-color: crimson;
+    text-align: center;
+    flex-basis: 200px;
+    padding: 5px;
+    margin: 10px;
+}
+.sticky:hover{
+    flex-basis: 500px;
 }
